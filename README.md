@@ -10,3 +10,9 @@ I parametri per far sì che un numero sia valido sono che:
 
 Per esempio: 
 se l'input è un array contenente "05417373", "3367726712",  "778823" bisogna ritornare "3367726712".
+
+La soluzione proposta per questo esercizio parte con un controllo preliminare sulla lunghezza dell'input: se è vuoto non ha senso valutarlo e si rischia solo di sollevare un exception; in caso la quantità di elementi nell'array in input sia 0, viene ritornato "".
+``` C#
+if( input.Length == 0 )
+    return "";
+```
