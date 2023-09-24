@@ -47,7 +47,7 @@ Se i primi due controlli sono passati a questo punto si entra in un if, che cont
     if (l == 14 && numberToCheck[..4] == "0039") {  
         numberToCheck = numberToCheck[4..];
     }
-    else if (l == 13 && numberToCheck[..3] == "+39") {         // Come sopra, solo per cose tipo +93
+    else if (l == 13 && numberToCheck[..3] == "+39") {
         numberToCheck = numberToCheck[3..];
     }
     else {
