@@ -1,8 +1,8 @@
 # Check Telefono
 
 ## Cosa chiede l'esercizio
-Lo scopo di questo programma è ricevere in input un array di stringhe che rappresentano dei numeri di telefono e ritornare il primo numero di cellulare italiano valido.<br>
-I parametri per far sì che un numero sia valido sono che:
+Lo scopo di questo programma è, dato in input un array di stringhe che rappresentano dei numeri di telefono, ritornare il primo numero di cellulare italiano valido.<br>
+I parametri per far sì che un numero sia valido sono:
 * può iniziare con +39 e deve essere lungo 13 caratteri;
 * può iniziare con 0039 (equivalente di +39) ed il numero deve essere composto da 14 caratteri;
 * con o senza prefisso deve iniziare con 3.
@@ -44,17 +44,17 @@ foreach (char c in numberToCheck)
 ```
 Se i primi due controlli sono passati a questo punto si entra in un if, che controlla se la lunghezza è maggiore di 10: se lo è ci sono 3 casi possibili: il numero è lungo 14 ed inizia con '0039', oppure il numero è lungo 13 ed inizia con '+39'; se uno dei due casi sopra è verificato significa che c'è un prefisso, e viene rimosso, in modo che l'ultimo controllo possa controllare se il numero inizia con 3. Nel caso in cui nessuna delle due condizioni sia verificata ritorna falso.
 ``` C#
-    if (l == 14 && numberToCheck[..4] == "0039") {  
-        numberToCheck = numberToCheck[4..];
-    }
-    else if (l == 13 && numberToCheck[..3] == "+39") {
-        numberToCheck = numberToCheck[3..];
-    }
-    else {
-        // Serve per evitare casi tipo 33393505050505 cha passerebbe tutti i precedenti controlli in quanto non rispetterebbe le condizioni nei precedenti if;
-        // tutela anche i casi sopra indicati.
-        return false;
-    }
+if (l == 14 && numberToCheck[..4] == "0039") {  
+    numberToCheck = numberToCheck[4..];
+}
+else if (l == 13 && numberToCheck[..3] == "+39") {
+    numberToCheck = numberToCheck[3..];
+}
+else {
+    // Serve per evitare casi tipo 33393505050505 cha passerebbe tutti i precedenti controlli in quanto non rispetterebbe le condizioni nei precedenti if;
+    // tutela anche i casi sopra indicati.
+    return false;
+}
 ```
 NOTA BENE: il numero modificato nella funzione non è il numero ritornato dal programma; quello modificato non è altro che una copia.
 <br>
