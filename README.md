@@ -16,7 +16,7 @@ Se l'input è un array contenente "05417373", "3367726712",  "778823" bisogna ri
 La soluzione proposta si compone di 3 elementi principali: un controllo preliminare sulla lunghezza dell'input, un costrutto iterativo foreach che scorre gli elementi contenuti in input, e la funzione 'CheckNumber()' che, chiamata nel foreach sopra menzionato, è incaricata di determinare se il numero in analisi è valido.
 
 ## Il codice
-La soluzione proposta è strutturate in due parti principali: la prima, che esegue un controllo preliminare sulla lunghezza dell'array in input, per evitare che venga passato un array con 0 elementi: se la lunghezza è di 0 elementi,viene ritornato subito "" interrompendo l'esecuzione della funzione 'Check()'
+La soluzione proposta è strutturata in due parti principali: la prima, che esegue un controllo preliminare sulla lunghezza dell'array in input, per evitare che venga passato un array con 0 elementi: se la lunghezza è di 0 elementi,viene ritornato subito "" interrompendo l'esecuzione della funzione 'Check()'
 ``` C#
 if( input.Length == 0 )
     return "";
